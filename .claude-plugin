@@ -1,1 +1,11 @@
-
+{
+  "name": "tokenmeter",
+  "version": "0.2.1",
+  "description": "Leiste über dem Eingabefeld mit 5-Stunden- und Wochenverbrauch inkl. Reset-Zeiten",
+  "author": { "name": "AIPilot2026" },
+  "homepage": "https://github.com/AIPilot2026/tokenmeter",
+  "repository": "https://github.com/AIPilot2026/tokenmeter",
+  "license": "MIT",
+  "keywords": ["usage", "limits", "tokens", "statusbar"],
+  "types": "./types/index.d.ts"
+}
