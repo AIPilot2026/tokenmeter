@@ -1,1 +1,12 @@
-
+{
+  "name": "tokenmeter",
+  "owner": { "name": "AIPilot2026" },
+  "description": "Tokenmeter: 5-Stunden- und Wochenlimit von Claude als dezente Leiste über dem Eingabefeld",
+  "plugins": [
+    {
+      "name": "tokenmeter",
+      "source": "./mod",
+      "description": "Leiste über dem Eingabefeld mit 5-Stunden- und Wochenverbrauch inkl. Reset-Zeiten"
+    }
+  ]
+}
