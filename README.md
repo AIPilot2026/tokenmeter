@@ -8,7 +8,7 @@ Eine dezente Leiste über dem Eingabefeld von Claude Code, die deine Nutzungslim
 
 - **5-Stunden-Limit** und **Wochenlimit** in Prozent, mit farbigem Balken (grün, ab 70 % gelb, ab 90 % rot)
 - **Reset-Zeitpunkt** des jeweiligen Fensters
-- Beim Start einer neuen Sitzung wird der zuletzt bekannte Stand angezeigt („Stand …“), bis die erste Antwort frische Werte liefert
+- Die Werte erscheinen mit der ersten Antwort von Claude in einer Sitzung und aktualisieren sich danach bei jeder weiteren Antwort
 - Mit `/tokenmeter` blendest du die Leiste aus und wieder ein
 
 > **Inoffizielles Community-Projekt.** Tokenmeter steht in keiner Verbindung zu Anthropic und wird von Anthropic weder unterstützt noch geprüft. „Claude“ ist eine Marke von Anthropic.
