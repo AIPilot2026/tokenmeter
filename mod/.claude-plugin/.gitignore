@@ -1,0 +1,10 @@
+# Persönliche Claude-Einstellungen nicht veröffentlichen
+.claude/
+
+# System- und Editor-Dateien
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
