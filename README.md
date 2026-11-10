@@ -27,13 +27,17 @@ The labels in the band are currently in German ("5 Std." = 5 hours, "Woche" = we
 
 ## Requirements
 
-- Claude Code (desktop app or terminal) with plugin mod support; tested with version 2.1.317
+- **Claude Code**, i.e. the **Code tab** of the Claude desktop app or the terminal. It does **not** work in the regular chat (including chat "Projects") or on claude.ai in the browser.
+- A recent version with plugin mod support; tested with version 2.1.317
+- **Git** installed on your computer (needed to download the plugin from GitHub)
 - A Claude subscription with usage limits (Pro/Max). Without limits there is nothing to show.
-- In the desktop app the band appears in sessions **with a project folder**.
+- In the desktop app the band appears in sessions **with a project folder** (any folder).
 
 ## Installation
 
-In a terminal (Claude Code CLI):
+**In the desktop app:** click **+** next to the prompt box → **Plugins** → **Add marketplace**, enter `AIPilot2026/tokenmeter`, then **Add plugin** and choose `tokenmeter`.
+
+**In a terminal** (Claude Code CLI):
 
 ```bash
 claude plugin marketplace add AIPilot2026/tokenmeter
@@ -45,7 +49,7 @@ claude plugin install tokenmeter@tokenmeter --scope user
 
 Or simply ask Claude: *"Install the plugin tokenmeter from the marketplace AIPilot2026/tokenmeter."*
 
-Then restart Claude. The band appears above the prompt once a session is running; the percentages arrive with Claude's first reply.
+Choose the **user** scope so the band works in all your sessions. Then **fully restart** Claude (quit the app, not just close the window). The band appears above the prompt once a session is running; the percentages arrive with Claude's first reply.
 
 ### Update
 
@@ -62,6 +66,17 @@ claude plugin update tokenmeter@tokenmeter
 ```bash
 claude plugin uninstall tokenmeter@tokenmeter
 ```
+
+## Troubleshooting: the band does not appear
+
+1. **Code tab?** Tokenmeter only works in Claude Code (Code tab or terminal), not in the regular chat or its "Projects".
+2. **Project folder?** In the desktop app, the session needs a project folder.
+3. **Is the plugin loaded?** Type `/` in a Code session. If `/tokenmeter` is listed, the plugin is loaded: run `/tokenmeter` once, the band may have been hidden.
+4. **Not listed?** Run `claude plugin list` in a terminal. `tokenmeter@tokenmeter` should be listed as *enabled* with scope *user*. If it is missing, install again and watch for error messages (often: Git is not installed).
+5. **Up to date?** Update the Claude desktop app / Claude Code. Older versions ignore mods silently.
+6. **Restarted?** Fully quit Claude and start it again after installing.
+
+Still not working? Open an [issue](https://github.com/AIPilot2026/tokenmeter/issues) with your Claude Code version and the output of `claude plugin list`.
 
 ## FAQ
 
@@ -108,11 +123,17 @@ Eine dezente Leiste über dem Eingabefeld von Claude Code, die deine Nutzungslim
 
 ### Voraussetzungen
 
-- Claude Code (Desktop-App oder Terminal) mit Unterstützung für Plugin-Mods; getestet mit Version 2.1.317
+- **Claude Code**, also der **Code-Tab** der Claude-Desktop-App oder das Terminal. Im normalen Chat (auch in dessen „Projekten“) und auf claude.ai im Browser funktioniert es **nicht**.
+- Eine aktuelle Version mit Unterstützung für Plugin-Mods; getestet mit Version 2.1.317
+- **Git** auf deinem Rechner (wird zum Herunterladen von GitHub gebraucht)
 - Ein Claude-Abo mit Nutzungslimits (Pro/Max)
-- In der Desktop-App erscheint die Leiste in Sitzungen **mit Projektordner**.
+- In der Desktop-App erscheint die Leiste in Sitzungen **mit Projektordner** (egal welcher).
 
 ### Installation
+
+**In der Desktop-App:** auf **+** neben dem Eingabefeld klicken → **Plugins** → **Add marketplace**, `AIPilot2026/tokenmeter` eingeben, dann **Add plugin** und `tokenmeter` wählen.
+
+**Im Terminal:**
 
 ```bash
 claude plugin marketplace add AIPilot2026/tokenmeter
@@ -122,10 +143,23 @@ claude plugin marketplace add AIPilot2026/tokenmeter
 claude plugin install tokenmeter@tokenmeter --scope user
 ```
 
-Alternativ kannst du Claude selbst bitten: *„Installiere das Plugin tokenmeter aus dem Marketplace AIPilot2026/tokenmeter.“* Danach Claude neu starten.
+Alternativ kannst du Claude selbst bitten: *„Installiere das Plugin tokenmeter aus dem Marketplace AIPilot2026/tokenmeter.“*
+
+Als Bereich **user** wählen, damit die Leiste in allen Sitzungen erscheint. Danach Claude **komplett neu starten** (App beenden, nicht nur das Fenster schließen).
 
 Aktualisieren: `claude plugin marketplace update tokenmeter`, dann `claude plugin update tokenmeter@tokenmeter`
 Deinstallieren: `claude plugin uninstall tokenmeter@tokenmeter`
+
+### Fehlersuche: Die Leiste erscheint nicht
+
+1. **Code-Tab?** Der Tokenmeter funktioniert nur in Claude Code (Code-Tab oder Terminal), nicht im normalen Chat oder dessen „Projekten“.
+2. **Projektordner?** In der Desktop-App braucht die Sitzung einen Projektordner.
+3. **Ist das Plugin geladen?** In einer Code-Sitzung `/` tippen. Steht `/tokenmeter` in der Liste, ist es geladen: einmal `/tokenmeter` ausführen, vielleicht wurde die Leiste ausgeblendet.
+4. **Nicht in der Liste?** Im Terminal `claude plugin list` ausführen. Dort sollte `tokenmeter@tokenmeter` als *enabled* mit Bereich *user* stehen. Fehlt es, erneut installieren und auf Fehlermeldungen achten (häufig: Git ist nicht installiert).
+5. **Aktuell?** Claude-Desktop-App bzw. Claude Code aktualisieren. Ältere Versionen ignorieren Mods ohne Meldung.
+6. **Neu gestartet?** Nach der Installation Claude komplett beenden und neu starten.
+
+Klappt es trotzdem nicht? Eröffne ein [Issue](https://github.com/AIPilot2026/tokenmeter/issues) mit deiner Claude-Code-Version und der Ausgabe von `claude plugin list`.
 
 ### Häufige Fragen
 
